@@ -12,3 +12,9 @@ def moveparticle(density)
 
    # Choose the location the particle will move from.
    loc=randint(size)
+
+   if loc == 0: move = 1
+   elif loc == size- 1: move = -1
+   else: move = choice([-1 1])
+
+   
