@@ -1,8 +1,8 @@
 # Move a particle left or right one space.
 
-def moveparticle(density)
+def moveparticle(density):
 
-   from numpy import array, as array
+   from numpy import array, asarray
    from numpy.random import randint, choice
 
    density=asarray(density)
@@ -15,7 +15,7 @@ def moveparticle(density)
 
    if loc == 0: move = 1
    elif loc == size- 1: move = -1
-   else: move = choice([-1 1])
+   else: move = choice([-1, 1])
 
    newdensity= density.copy()
    newdensity[loc] -= 1

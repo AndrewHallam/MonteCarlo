@@ -1,23 +1,21 @@
 # This is the main monte carlo script which will repeat the process a number of times.
 
-def montecarlo(density)
+def montecarlo(density):
 
    import diffusion_model, mc_comparison, mc_moveparticle
-   from numpy import 
 
-   i=0
-   energy1=diffusion_model.energy(density)
-   while i < 10
+   energy=diffusion_model.energy(density)
+   for i in range(10):
 
       density_new=mc_moveparticle.moveparticle(density)
-      energy2=diffusion_model.energy(density_new)
+      energy_new=diffusion_model.energy(density_new)
 
-      if mc_comparison.compare(energy1, energy2) = true
-      density=density_new
+      if mc_comparison.compare(energy, energy_new) == True:
+         density=density_new
+         energy=energy_new
 
-      else break
+      print "Density is {}, and the energy is {}".format(density, energy)
 
-      i += 1
-   
-   
-print montecarlo([1 1 1]
+   return energy
+
+print montecarlo([3, 7, 4])
