@@ -1,7 +1,7 @@
 # This is the main monte carlo script which will repeat the process a number of times.
 # T is the temperature of the system.
 
-def montecarlo(density, T, imax):
+def montecarlo(density, T=100, imax=10):
 
    import diffusion_model, mc_comparison, mc_moveparticle
 
@@ -19,4 +19,4 @@ def montecarlo(density, T, imax):
 
    return energy
 
-print montecarlo([1, 7, 1], 10, 20)
+print montecarlo([0, 1, 1])
