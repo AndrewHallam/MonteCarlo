@@ -7,11 +7,11 @@ def moveparticle(density):
 
    density=asarray(density)
 
-   # Choose the range over which a random particle will be selected.
-   size=density.size
+   nonzero=arange(density.size)[density != 0]
+   
+   loc = choice(nonzero)
 
-   # Choose the location the particle will move from.
-   loc=randint(size)
+   if len(nonzero) == 0: raise ValueError("We can't move particles if there aren't any to move!")
 
    if loc == 0: move = 1
    elif loc == size- 1: move = -1
