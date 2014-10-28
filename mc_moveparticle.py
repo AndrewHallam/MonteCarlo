@@ -7,6 +7,12 @@ def moveparticle(density):
 
    density=asarray(density)
 
+   if density.ndim != 1:
+      raise ValueError("Density must be one dimensional")
+
+   if density.dtype.kind != 'i': 
+      raise TypeError('Density must be an array of integers')
+
    nonzero=arange(density.size)[density != 0]
    
    loc = choice(nonzero)
