@@ -1,0 +1,1 @@
+# Compare the initial and the new energy and determine whether or not to accept the move.
