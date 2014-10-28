@@ -19,4 +19,4 @@ def montecarlo(density, T, imax):
 
    return energy
 
-print montecarlo([3, 7, 4], 10, 10)
+print montecarlo([1, 7, 1], 10, 20)
