@@ -2,7 +2,7 @@
 
 def moveparticle(density):
 
-   from numpy import array, asarray
+   from numpy import array, asarray, arange
    from numpy.random import randint, choice
 
    density=asarray(density)
@@ -14,7 +14,7 @@ def moveparticle(density):
    if len(nonzero) == 0: raise ValueError("We can't move particles if there aren't any to move!")
 
    if loc == 0: move = 1
-   elif loc == size- 1: move = -1
+   elif loc == density.size- 1: move = -1
    else: move = choice([-1, 1])
 
    newdensity= density.copy()
