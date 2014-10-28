@@ -17,4 +17,8 @@ def moveparticle(density)
    elif loc == size- 1: move = -1
    else: move = choice([-1 1])
 
-   
+   newdensity= density.copy()
+   newdensity[loc] -= 1
+   newdensity[loc + move] += 1
+
+   return newdensity
