@@ -17,6 +17,6 @@ def montecarlo(density, T=100, imax=10):
 
       print "Density is {}, and the energy is {}".format(density, energy)
 
-   return energy
+   return (energy, density)
 
-print montecarlo([0, 1, 1])
+
